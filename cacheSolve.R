@@ -1,11 +1,11 @@
-cacheSolve <- function(x = matrix(), ...) {
-  m <- x$getmatrix()
+cacheSolve <- function(x = numeric()) {
+  m <- x$getmean()
   if(!is.null(m)) {
     message("getting cached data")
     return(m)
   }
-  matrix <- x$get()
-  m <- solve(data, ...)
-  x$setmatrix(m)
+  data <- x$get()
+  m <- mean(data, ...)
+  x$setmean(m)
   m
 }
